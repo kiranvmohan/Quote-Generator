@@ -6,9 +6,9 @@ const App = () => {
   const [quote, setQuote] = useState("It's always  you");
   const [author, setAuthor] = useState("unknown");
 
-  // Function to fetch a new quote from the API
+  
   const fetchQuote = async () => {
-    const response = await axios.get('https://dummyjson.com/quotes'); // Use the provided API URL
+    const response = await axios.get('https://dummyjson.com/quotes'); 
     const randomQuote = response.data.quotes[Math.floor(Math.random() * response.data.quotes.length)];
     setQuote(randomQuote.quote);
     setAuthor(randomQuote.author);
